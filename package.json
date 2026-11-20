@@ -1,0 +1,17 @@
+{
+  "name": "mockvisual",
+  "private": true,
+  "packageManager": "pnpm@10.34.9",
+  "scripts": {
+    "dev": "turbo dev",
+    "test": "turbo test",
+    "lint": "turbo lint"
+  },
+  "devDependencies": {
+    "eslint": "^10.15.0",
+    "turbo": "^2.11.13",
+    "typescript": "^7.0.2",
+    "typescript-eslint": "^8.73.0",
+    "vitest": "^5.1.1"
+  }
+}

@@ -1,0 +1,220 @@
+/* ==========================================================================
+   MockVisual — Design tokens
+   Thème sombre par défaut. Thème clair : <html data-theme="light">.
+   Contrastes vérifiés (WCAG 2.1 AA) : voir docs/brand.md.
+   Polices : Space Grotesk (interface) et JetBrains Mono (code), licence OFL.
+   À auto-héberger (fichiers .woff2) avec font-display: swap.
+   ========================================================================== */
+
+:root {
+  color-scheme: dark;
+
+  /* ---------- Typographie ---------- */
+  --mv-font-sans: "Space Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mv-font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --mv-text-xs: 0.75rem;    /* 12 px : étiquettes mono */
+  --mv-text-sm: 0.875rem;   /* 14 px : texte secondaire */
+  --mv-text-md: 1rem;       /* 16 px : texte courant */
+  --mv-text-lg: 1.25rem;    /* 20 px : sous-titres */
+  --mv-text-xl: 1.5rem;     /* 24 px : titres de section */
+  --mv-text-2xl: 2rem;      /* 32 px : titres de page */
+  --mv-text-3xl: 3rem;      /* 48 px : titres d'accroche */
+
+  --mv-weight-regular: 400;
+  --mv-weight-medium: 500;
+  --mv-weight-bold: 700;
+
+  --mv-leading-tight: 1.15;
+  --mv-leading-snug: 1.35;
+  --mv-leading-normal: 1.6;
+
+  --mv-tracking-tight: -0.02em;  /* gros titres */
+  --mv-tracking-label: 0.06em;   /* étiquettes mono en majuscules */
+
+  /* ---------- Espacement (base 4 px) ---------- */
+  --mv-space-0: 0;
+  --mv-space-1: 0.25rem;   /*  4 */
+  --mv-space-2: 0.5rem;    /*  8 */
+  --mv-space-3: 0.75rem;   /* 12 */
+  --mv-space-4: 1rem;      /* 16 */
+  --mv-space-5: 1.5rem;    /* 24 */
+  --mv-space-6: 2rem;      /* 32 */
+  --mv-space-7: 3rem;      /* 48 */
+  --mv-space-8: 4rem;      /* 64 */
+  --mv-space-9: 6rem;      /* 96 */
+
+  /* ---------- Rayons ---------- */
+  --mv-radius-xs: 4px;
+  --mv-radius-sm: 8px;
+  --mv-radius-md: 12px;
+  --mv-radius-lg: 16px;
+  --mv-radius-xl: 24px;
+  --mv-radius-full: 9999px;
+
+  /* ---------- Couleurs : primitives (thème sombre) ---------- */
+  --mv-ink-950: #0b0d12;
+  --mv-ink-900: #0f1319;
+  --mv-ink-850: #141922;
+  --mv-ink-800: #1b2230;
+  --mv-ink-700: #2a3242;
+  --mv-ink-500: #5b667c;
+  --mv-ink-400: #8791a6;
+  --mv-ink-300: #9aa3b5;
+  --mv-ink-50: #f4f6fa;
+
+  --mv-lime-400: #d6fa5c;
+  --mv-lime-500: #c8f52e;
+  --mv-lime-700: #4d6b00;
+
+  /* ---------- Couleurs : sémantiques (thème sombre) ---------- */
+  --mv-bg: var(--mv-ink-950);
+  --mv-bg-sunken: var(--mv-ink-900);      /* blocs de code, champs */
+  --mv-surface: var(--mv-ink-850);        /* cartes */
+  --mv-surface-raised: var(--mv-ink-800); /* survol, menus */
+  --mv-border: var(--mv-ink-700);
+  --mv-border-strong: var(--mv-ink-500);  /* 3:1 minimum, contours de champs */
+
+  --mv-text: var(--mv-ink-50);
+  --mv-text-secondary: var(--mv-ink-300);
+  --mv-text-muted: var(--mv-ink-400);
+  --mv-text-disabled: var(--mv-ink-500);  /* exempté de contraste, jamais pour une info utile */
+
+  --mv-accent: var(--mv-lime-500);
+  --mv-accent-hover: var(--mv-lime-400);
+  --mv-on-accent: var(--mv-ink-950);      /* texte sur fond accent */
+  --mv-accent-text: var(--mv-lime-500);   /* accent utilisé comme texte */
+
+  --mv-success: #4ade80;
+  --mv-success-bg: #0f2a1a;
+  --mv-warning: #fbbf24;
+  --mv-warning-bg: #2d2208;
+  --mv-error: #ff7a7a;
+  --mv-error-text: #ff9a9a;
+  --mv-error-bg: #2a1517;
+  --mv-info: #7db8ff;
+  --mv-info-bg: #101f33;
+
+  --mv-focus-ring: var(--mv-lime-500);
+
+  /* ---------- Code : coloration syntaxique ---------- */
+  --mv-code-bg: var(--mv-ink-900);
+  --mv-code-text: var(--mv-ink-50);
+  --mv-code-comment: #8791a6;
+  --mv-code-keyword: #c8f52e;
+  --mv-code-string: #7db8ff;
+  --mv-code-number: #fbbf24;
+
+  /* ---------- Ombres, mouvement, couches ---------- */
+  --mv-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+  --mv-shadow-md: 0 8px 24px rgb(0 0 0 / 0.45);
+  --mv-shadow-glow: 0 0 0 1px rgb(200 245 46 / 0.25), 0 8px 32px rgb(200 245 46 / 0.12);
+
+  --mv-duration-fast: 120ms;
+  --mv-duration-base: 200ms;
+  --mv-duration-slow: 400ms;
+  --mv-ease: cubic-bezier(0.2, 0, 0, 1);
+
+  --mv-z-sticky: 100;
+  --mv-z-overlay: 200;
+  --mv-z-toast: 300;
+
+  /* ---------- Tokens de composants ---------- */
+  --mv-card-bg: var(--mv-surface);
+  --mv-card-border: var(--mv-border);
+  --mv-card-radius: var(--mv-radius-lg);
+  --mv-card-padding: var(--mv-space-5);
+
+  --mv-btn-height: 44px;           /* cible tactile minimale */
+  --mv-btn-radius: var(--mv-radius-md);
+  --mv-btn-padding-x: var(--mv-space-5);
+
+  --mv-code-radius: var(--mv-radius-md);
+  --mv-code-padding: var(--mv-space-4);
+
+  --mv-skeleton-base: var(--mv-ink-800);
+  --mv-skeleton-shine: var(--mv-ink-700);
+}
+
+/* ==========================================================================
+   Thème clair (activé uniquement sur demande explicite)
+   Le lime #c8f52e est illisible sur fond clair : on utilise un vert olive
+   foncé (#4d6b00) pour l'accent en texte, et on garde le lime en aplat
+   avec un texte sombre.
+   ========================================================================== */
+[data-theme="light"] {
+  color-scheme: light;
+
+  --mv-bg: #f7f8fa;
+  --mv-bg-sunken: #eef0f4;
+  --mv-surface: #ffffff;
+  --mv-surface-raised: #f1f3f7;
+  --mv-border: #d9dde6;
+  --mv-border-strong: #7c869a;
+
+  --mv-text: #12151c;
+  --mv-text-secondary: #4a5368;
+  --mv-text-muted: #5b6478;
+  --mv-text-disabled: #9aa3b5;
+
+  --mv-accent: var(--mv-lime-500);
+  --mv-accent-hover: #b9e620;
+  --mv-on-accent: var(--mv-ink-950);
+  --mv-accent-text: var(--mv-lime-700);
+
+  --mv-success: #067647;
+  --mv-success-bg: #e7f6ee;
+  --mv-warning: #8a5a00;
+  --mv-warning-bg: #fdf3dc;
+  --mv-error: #b42318;
+  --mv-error-text: #b42318;
+  --mv-error-bg: #fdecea;
+  --mv-info: #1d5fbf;
+  --mv-info-bg: #e8f0fc;
+
+  --mv-focus-ring: #4d6b00;
+
+  --mv-code-bg: #eef0f4;
+  --mv-code-text: #12151c;
+  --mv-code-comment: #5b6478;
+  --mv-code-keyword: #4d6b00;
+  --mv-code-string: #1d5fbf;
+  --mv-code-number: #8a5a00;
+
+  --mv-shadow-sm: 0 1px 2px rgb(18 21 28 / 0.08);
+  --mv-shadow-md: 0 8px 24px rgb(18 21 28 / 0.12);
+  --mv-shadow-glow: 0 0 0 1px rgb(77 107 0 / 0.3), 0 8px 24px rgb(77 107 0 / 0.12);
+
+  --mv-skeleton-base: #e4e7ee;
+  --mv-skeleton-shine: #f1f3f7;
+}
+
+/* ==========================================================================
+   Réglages communs
+   ========================================================================== */
+html {
+  background: var(--mv-bg);
+  color: var(--mv-text);
+  font-family: var(--mv-font-sans);
+  font-size: 100%;
+  line-height: var(--mv-leading-normal);
+}
+
+:focus-visible {
+  outline: 2px solid var(--mv-focus-ring);
+  outline-offset: 2px;
+}
+
+/* Animation du squelette de chargement */
+@keyframes mv-shimmer {
+  from { background-position: 200% 0; }
+  to   { background-position: -200% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
